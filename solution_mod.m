@@ -358,8 +358,8 @@ function [Ua, q, dt_used] = Rusanov_nomesh_limit_implicit( ...
     grad_p_y_n = grad_p_y(idx_nei);
 
     %% -------------------- 4) 法向量 --------------------
-    nx = vector(:,:,1);
-    ny = vector(:,:,2);
+    nx = vector(:,:,1)/2;
+    ny = vector(:,:,2)/2;
 
     grad_r_dot_n_c = grad_r_x_c .* nx + grad_r_y_c .* ny;
     grad_u_dot_n_c = grad_u_x_c .* nx + grad_u_y_c .* ny;
